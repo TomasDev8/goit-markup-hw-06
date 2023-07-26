@@ -253,7 +253,6 @@ p {
     padding-bottom: 10px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
 }
 
 .backdrop.is-hidden {
@@ -282,7 +281,7 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    padding: 8px;
+    padding: 40px;
     width: 528px;
     height: 581px;
     border-radius: 4px;
@@ -297,8 +296,265 @@ p {
     width: 31px;
     height: 31px;
     border-radius: 50%;
-    right:8px;
+    right: 8px;
+    top: 8px;
     position: absolute;
+    cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.icon-close-style:hover svg {
+    fill: var(--brand-color);
+    stroke: var(--brand-color);
+}
+
+.model-tittle {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1px;
+}
+
+.contact-form-input {
+    margin: 1px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.20);
+    display: block;
+    padding-left: 42px;
+}
+
+.input-size {
+    width: 358px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.60);
+    border-radius: 4px;
+    border-radius: 4px;
+    background: rgba(33, 150, 243, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+label>.input-size {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.60);
+}
+
+.form-btn {
+    height: 50px;
+    width: 200px;
+    font-family: 'roboto';
+    background-color: var(--brand-color);
+    border: 1px solid var(--brand-color);
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.96px;
+    border-radius: 4px;
+    padding: 0;
+    margin-top: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.sub-text {
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 12px;
+    margin-left: 90px;
+}
+
+.label-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 90px;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.self-pos {
+    align-self: flex-end;
+}
+
+.head-form {
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: rgba(33, 33, 33, 1);
+    margin-bottom: 12px;
+}
+
+label {
+    font-family: 'Roboto';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: rgba(117, 117, 117, 1);
+    padding-top: 10px;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+.contact-form-input {
+    width: 448px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.20);
+    display: block;
+    padding-left: 42px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea-width {
+    width: 448px;
+    height: 120px;
+    padding: 16px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.20);
+    display: block;
+    cursor: pointer;
+    border: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-send {
+    background-color: var(--brand-color);
+    color: #FFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.96px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    position: relative;
+    bottom: 28px;
+    cursor: pointer;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.contact-form-input:focus,
+textarea:focus,
+.contact-form-input:hover,
+textarea:hover {
+    border: 1px solid var(--brand-color);
+    outline: none;
+}
+
+.contact-form-input:focus+.svg-form,
+.contact-form-input:hover+.svg-form {
+    fill: #2196F3;
+}
+
+.svg-form {
+    position: absolute;
+    top: 38px;
+    left: 12px;
+    fill: var(--font-one-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.send-text-style {
+    color: #757575;
+    font-size: 14px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.42px;
+    padding-left: 77px;
+    padding-right: 51px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.checkbox-container {
+    padding-left: 21px;
+    padding-right: 21px;
+    margin-top: 10px;
+    padding-top: 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.custom-checkbox label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 16px;
+    height: 0.9em;
+    border: 1px solid black;
+    border-radius: 2px;
+    overflow: hidden;
+    right: 11px;
+}
+
+.custom-checkbox label svg {
+    display: none;
+    position: relative;
+    top: -10px;
+}
+
+.custom-checkbox input[type="checkbox"]:checked+label svg {
+    display: inline-block;
+}
+
+.custom-checkbox>p {
+    position: relative;
+    left: 12px;
+    top: -25px;
+    color: var(--font-two-color);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.42px;
 }
 
 .request-our-services-btn:hover,
@@ -306,7 +562,6 @@ p {
     background-color: #18619c;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
 /*main (second section)*/
 
 .second-section-container {
@@ -735,3 +990,9 @@ p {
 .product-cards:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+
+
+
+
+
